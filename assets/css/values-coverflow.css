@@ -1,0 +1,41 @@
+/* Design System coverflow; original David images and editorial copy retained. */
+.values { overflow: clip; }
+.values-coverflow { margin-top: 35px; }
+.values-coverflow .coverflow-container { max-width: 1150px; height: auto; pointer-events: none; }
+.values-coverflow .coverflow-container:focus-visible { outline: 2px solid var(--brand); outline-offset: 5px; border-radius: 18px; }
+.values-coverflow .coverflow-stage { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; pointer-events: none; }
+.values-coverflow .coverflow-card { position: relative; width: 100%; height: auto; pointer-events: auto; }
+.values-coverflow .card-glass-panel { padding: 26px; }
+.values-coverflow .coverflow-ambient-glow { background: var(--brand); }
+.values-coverflow .value-top { margin-bottom: 20px; }
+.values-coverflow .value-top .mono { font-size: 9px; }
+.values-coverflow .value-image { flex-shrink: 0; aspect-ratio: 1.7; }
+.values-coverflow .value-image img { pointer-events: none; }
+.values-coverflow .card-title { font-size: 52px; line-height: 1.05; margin: 22px 0 14px; }
+.values-coverflow .card-copy { font-size: 11px; line-height: 1.8; margin: 0; }
+.values-coverflow .value-practice { margin-top: auto; padding-top: 18px; font-size: 10px; }
+.values-coverflow .value-select { position: absolute; inset: 0; border: 0; border-radius: inherit; background: transparent; }
+.values-coverflow .value-select:focus-visible { outline-offset: -6px; }
+.values-coverflow .carousel-controls { display: none; }
+.values-coverflow.is-enhanced .coverflow-container { height: 700px; }
+.values-coverflow.is-enhanced .coverflow-stage { display: flex; gap: 0; }
+.values-coverflow.is-enhanced .coverflow-card { position: absolute; width: 360px; height: 560px; }
+.values-coverflow.is-enhanced .carousel-controls { display: flex; }
+.values-coverflow .carousel-controls button { width: 44px; height: 44px; }
+.values-coverflow .coverflow-card:focus-within .card-glass-panel { border-color: var(--brand); }
+.values .image-context { margin-top: 28px; }
+@media (max-width: 850px) {
+  .values-coverflow.is-enhanced .coverflow-card { width: 320px; height: 530px; }
+  .values-coverflow.is-enhanced .coverflow-container { height: 650px; }
+  .values-coverflow .card-glass-panel { padding: 24px; }
+  .values-coverflow .card-title { font-size: 48px; }
+}
+@media (max-width: 600px) {
+  .values-coverflow .coverflow-stage { grid-template-columns: 1fr; }
+  .values-coverflow.is-enhanced .coverflow-card { width: min(280px, 78vw); height: 505px; }
+  .values-coverflow.is-enhanced .coverflow-container { height: 610px; }
+  .values-coverflow .card-glass-panel { padding: 22px; }
+  .values-coverflow .card-title { font-size: 44px; }
+  .values-coverflow .card-copy { font-size: 11px; }
+  .values-coverflow .value-practice { font-size: 9px; }
+}

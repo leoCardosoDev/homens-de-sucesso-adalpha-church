@@ -1,0 +1,17 @@
+{
+  "name": "homens-de-sucesso-adalpha-church",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/verify-dist.mjs",
+    "preview": "node scripts/preview.mjs",
+    "verify": "node scripts/verify-dist.mjs"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.2.0",
+    "lightningcss": "^1.30.1",
+    "terser": "^5.44.0"
+  }
+}

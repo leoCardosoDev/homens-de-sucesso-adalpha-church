@@ -1,0 +1,25 @@
+# Build e dependências — a Vercel gera dist a partir dos fontes.
+node_modules/
+dist/
+.vercel/
+*.log
+
+# Configuração local e segredos.
+.env
+.env.*
+!.env.example
+
+# Materiais de trabalho preservados apenas localmente.
+temp/
+homens-de-sucesso-design-system/
+docs/previews/
+assets/images/books/references/
+assets/images/books/sabedoria-source.webp
+assets/images/brand/brand-application.webp
+assets/images/brand/lockup.webp
+assets/images/brand/tagline-white.webp
+assets/images/brand/wordmark-black.webp
+
+# macOS.
+.DS_Store
+._*

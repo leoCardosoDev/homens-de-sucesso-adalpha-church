@@ -1,0 +1,118 @@
+{
+  "images": [
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/lockup.png",
+      "output": "assets/images/brand/lockup.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/symbol-orange.png",
+      "output": "assets/images/brand/symbol-orange.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/symbol-white.png",
+      "output": "assets/images/brand/symbol-white.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/wordmark-white.png",
+      "output": "assets/images/brand/wordmark-white.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/brand-application.png",
+      "output": "assets/images/brand/brand-application.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/symbol-black.png",
+      "output": "assets/images/brand/symbol-black.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/wordmark-black.png",
+      "output": "assets/images/brand/wordmark-black.webp"
+    },
+    {
+      "source": "homens-de-sucesso-design-system/assets/overview/brand/tagline-white.png",
+      "output": "assets/images/brand/tagline-white.webp"
+    },
+    {
+      "source": "assets/images/temp/Davi tocando a lira nas colinas.png",
+      "output": "assets/images/davi/davi-harpista.webp",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "source": "assets/images/temp/Davi, rei guerreiro nas colinas da Judeia.png",
+      "output": "assets/images/davi/davi-rei-guerreiro.webp",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "source": "assets/images/temp/Jovem pastor com rebanho na Judeia.png",
+      "output": "assets/images/davi/davi-pastor.webp",
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "sequence": {
+    "source": "Video_of_David_aging_1080p_20261009212440.mp4",
+    "pattern": "assets/images/davi/frames/davi-%04d.webp",
+    "frameCount": 239,
+    "fps": 24,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "audio": "assets/images/davi/davi-audio.mp3",
+    "durationSeconds": 9.963
+  },
+  "bookCovers": [
+    {
+      "id": "transicao",
+      "source": "codex-clipboard-58303d6e-a6d2-49bf-8081-cf19149fe932.png",
+      "output": "assets/images/books/transicao-original.webp",
+      "conversion": "lossless",
+      "artwork": "original pixels; perspective rectified only in browser"
+    },
+    {
+      "id": "sabedoria",
+      "source": "codex-clipboard-d6edcbfa-9f36-4f58-be25-00e2be93d358.png",
+      "output": "assets/images/books/sabedoria-original.webp",
+      "conversion": "lossless",
+      "artwork": "original pixels; perspective rectified only in browser"
+    },
+    {
+      "id": "vontade",
+      "source": "codex-clipboard-2a83ac23-6794-4e48-affe-9e942efcc6b0.png",
+      "output": "assets/images/books/vontade-original.webp",
+      "conversion": "lossless",
+      "artwork": "original pixels; perspective rectified only in browser"
+    },
+    {
+      "id": "ceo",
+      "source": "codex-clipboard-5ed0a1c1-66c3-4800-8c7b-0d0d13210520.png",
+      "output": "assets/images/books/ceo-original.webp",
+      "conversion": "lossless",
+      "artwork": "original pixels; perspective rectified only in browser"
+    }
+  ],
+  "textReferences": [
+    {
+      "book": "vontade",
+      "source": "IMG_20261009_223459934_HDR.jpg",
+      "output": "assets/images/books/references/vontade-referencia-textual.webp",
+      "conversion": "lossless; EXIF orientation normalized",
+      "usage": "editorial text reference only; not displayed on page"
+    },
+    {
+      "book": "ceo",
+      "source": "IMG_20261009_223404458_HDR.jpg",
+      "output": "assets/images/books/references/ceo-referencia-textual.webp",
+      "conversion": "lossless; EXIF orientation normalized",
+      "usage": "editorial text reference only; not displayed on page"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Homens de Sucesso | Igreja ADAlpha
 
-Landing page estática. HTML em `index.html`; estilos em `assets/css`; scripts em `assets/js`; imagens e frames em `assets/images`. Sem instalação ou dependências JavaScript externas. As fontes Six Caps e Montserrat usam o CDN do Google Fonts, conforme o design system.
+Landing page estática. HTML em `index.html`; estilos em `assets/css`; scripts em `assets/js`; imagens e frames em `assets/images`. Sem dependências JavaScript externas no navegador. O build de produção usa Node.js para minificar os arquivos. As fontes Six Caps e Montserrat usam o CDN do Google Fonts, conforme o design system.
 
 ## Prévia
 
@@ -27,5 +27,22 @@ Editar `assets/js/content.js` para cadastrar dados reais da liderança ou atuali
 
 O manifesto `assets/asset-manifest.json` registra conversões e a origem do clipe. Originais da antiga pasta `assets/images/temp` foram preservados em `temp/converted-originals`; a página não depende deles. Materiais de referência em `temp` não fazem parte da entrega pública.
 
-Para hospedar, enviar apenas `index.html` e `assets`. Conferir as pendências editoriais em `docs/editorial-review.md` antes da publicação. Não foi feita publicação externa.
-# homens-de-sucesso-adalpha-church
+## Build e deploy via GitHub / Vercel
+
+Com Node.js 22 ou superior:
+
+```sh
+npm ci
+npm run build
+npm run preview
+```
+
+A prévia em http://127.0.0.1:4173 serve somente `dist/`, incluindo a página personalizada para caminhos inexistentes com status HTTP 404. `npm run verify` confere a saída sem refazer o build.
+
+O build minifica HTML, CSS e JavaScript, preserva a ordem dos scripts e copia apenas a mídia declarada em `scripts/build-assets.json`, junto com os 239 frames do manifesto. Imagens e áudio não são recomprimidos. Ao adicionar novos arquivos usados pelo site, atualizar a lista de assets; o build verifica os caminhos publicados.
+
+Os fontes e `package-lock.json` são versionados. `dist/`, dependências, originais em `temp`, referências de design e `.DS_Store` ficam fora do Git. A Vercel gera `dist` em cada build; materiais de trabalho nunca são copiados para a saída pública.
+
+Importar o repositório `leoCardosoDev/homens-de-sucesso-adalpha-church` na Vercel com a raiz do projeto. `vercel.json` configura Framework Preset Other, instalação `npm ci`, build `npm run build` e saída `dist`. A página `404.html` fica na raiz da saída, com caminhos absolutos para funcionar em URLs de qualquer profundidade. Não adicionar uma reescrita geral para `index.html`, pois esconderia os erros 404.
+
+Conferir as pendências editoriais em `docs/editorial-review.md` antes da publicação. A conexão com a Vercel deve ser feita na conta responsável pelo site.

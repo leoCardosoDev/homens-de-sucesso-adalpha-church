@@ -1,0 +1,44 @@
+{
+  "html": "sem CSS, JS ou eventos inline",
+  "internal_links": "todos os destinos existem",
+  "local_assets": "todos os caminhos existentes",
+  "david_frames": 239,
+  "runtime_design_system_references": 0,
+  "chapters_with_book": 1,
+  "desktop_console_errors": 0,
+  "mobile_horizontal_overflow": false,
+  "organogram_matrix_nodes": 50,
+  "organogram_base_nodes": 6,
+  "book_dialog_escape_and_focus_return": "passou",
+  "motion_control": "passou",
+  "david_playback_to_final_frame": "passou",
+  "corrected_preface_vontade": "Hernandes Dias Lopes",
+  "corrected_preface_ceo": "cantora Cassiane",
+  "latest_photos": "referências textuais; capas anteriores mantidas",
+  "hero_book_count": 0,
+  "hero_portal": {
+    "initial": "brasão branco centralizado com grid do Design System",
+    "panels": "abertura conferida por scroll",
+    "reveal": "hero atual visível ao final",
+    "desktop": "1280x720 e 1440x900",
+    "mobile": "390x844, sem overflow horizontal",
+    "text_below_menu": "desktop 132px > 87px; celular 115px > 77px",
+    "paused": "conteúdo revelado, botões disponíveis",
+    "console_errors": 0
+  },
+  "book_sections": [
+    "leituras"
+  ],
+  "books_outside_readings": 0,
+  "book_removal_review": {
+    "desktop_console_errors": 0,
+    "horizontal_overflow": false,
+    "library_titles_preserved": 4,
+    "featured_book_preserved": true,
+    "empty_book_columns_removed": [
+      "estrutura",
+      "mensagem",
+      "viva"
+    ]
+  }
+}

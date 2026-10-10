@@ -1,0 +1,10 @@
+{
+  "pages": ["index.html", "404.html"],
+  "css": ["design-system.css", "organogram.css", "landing.css", "hero-portal.css", "book-journey.css", "values-coverflow.css", "not-found.css"],
+  "js": ["content.js", "organogram.js", "landing.js"],
+  "media": [
+    "brand/symbol-orange.webp", "brand/symbol-white.webp", "brand/symbol-black.webp", "brand/wordmark-white.webp",
+    "davi/davi-pastor.webp", "davi/davi-harpista.webp", "davi/davi-rei-guerreiro.webp", "davi/davi-audio.mp3",
+    "books/transicao-original.webp", "books/sabedoria-original.webp", "books/vontade-original.webp", "books/ceo-original.webp"
+  ]
+}

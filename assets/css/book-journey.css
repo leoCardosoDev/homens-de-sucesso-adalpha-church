@@ -1,0 +1,133 @@
+/* Scroll e 3D: the Design System's shared object, adapted to four books. */
+.readings .readings-intro { display: block; }
+.book-journey {
+  --journey-height: max(620px, calc(100svh - 110px));
+  position: relative;
+  display: block;
+  isolation: isolate;
+  margin-top: 65px;
+}
+.book-journey-stage {
+  position: sticky;
+  top: 100px;
+  height: var(--journey-height);
+  margin-bottom: calc(-1 * var(--journey-height));
+  z-index: 2;
+  pointer-events: none;
+}
+.book-journey-stage .book-scene {
+  position: absolute;
+  left: 74%;
+  top: 50%;
+  width: 340px;
+  height: 430px;
+  min-height: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  perspective: 1400px;
+}
+.book-journey-stage .book-object,
+.book-journey .library-card .book-object {
+  --volume-width: 250px;
+  --volume-height: 380px;
+  --book-depth: 34px;
+  width: var(--volume-width);
+  height: var(--volume-height);
+  transition: none;
+}
+.book-journey .book-spine {
+  transform: rotateY(-90deg) translateZ(calc(var(--volume-width) / 2));
+  background: linear-gradient(90deg, #20150f, var(--journey-spine, #d4d2c8), #20150f);
+}
+.book-journey .book-pages { transform: rotateY(90deg) translateZ(calc(var(--volume-width) / 2)); }
+.book-journey .book-top { transform: rotateX(90deg) translateZ(calc(var(--volume-height) / 2)); }
+.book-journey .book-bottom { transform: rotateX(-90deg) translateZ(calc(var(--volume-height) / 2)); }
+.book-journey .library-card {
+  height: var(--journey-height);
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9%;
+  align-items: center;
+  position: relative;
+  scroll-margin-top: 100px;
+}
+.book-journey .library-card > .book-scene { display: none; }
+.book-journey .library-copy { grid-column: 1; grid-row: 1; min-width: 0; }
+.book-journey .library-card:nth-of-type(even) .library-copy { grid-column: 2; }
+.book-journey .library-theme { font-size: 10px; letter-spacing: .14em; }
+.book-journey .library-card h3 {
+  font-size: clamp(24px, 2.6vw, 42px);
+  line-height: 1.25;
+  min-height: 0;
+  margin: 24px 0;
+  letter-spacing: -.035em;
+}
+.book-journey .library-author,
+.book-journey .library-preface { font-size: 12px; line-height: 1.8; }
+.book-journey .library-description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 24px 0 36px;
+  max-width: 450px;
+}
+.book-journey .library-card .book-action { width: 100%; font-size: 12px; padding-block: 17px; }
+.book-journey .library-status { min-height: 0; }
+.book-journey .library-card:last-child { border-bottom: 1px solid var(--line); }
+.motion-paused .book-journey-stage { display: none; }
+.motion-paused .book-journey .library-card { height: auto; min-height: 520px; }
+.motion-paused .book-journey .library-card > .book-scene {
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+  height: 430px;
+  margin: 0;
+}
+.motion-paused .book-journey .library-card:nth-of-type(even) > .book-scene { grid-column: 1; }
+@media (max-width: 1000px) {
+  .book-journey-stage .book-object,
+  .book-journey .library-card .book-object {
+    --volume-width: 200px;
+    --volume-height: 304px;
+    --book-depth: 28px;
+  }
+  .book-journey-stage .book-scene { width: 270px; height: 350px; }
+}
+@media (max-width: 700px) {
+  .book-journey { --journey-height: max(740px, calc(100svh - 100px)); margin-top: 40px; }
+  .book-journey-stage { top: 90px; }
+  .book-journey-stage .book-scene { left: 50%; top: 22%; width: 240px; height: 285px; }
+  .book-journey-stage .book-object,
+  .book-journey .library-card .book-object {
+    --volume-width: 160px;
+    --volume-height: 244px;
+    --book-depth: 24px;
+  }
+  .book-journey .library-card { grid-template-columns: 1fr; align-items: end; padding: 340px 0 45px; gap: 0; }
+  .book-journey .library-card .library-copy,
+  .book-journey .library-card:nth-of-type(even) .library-copy { grid-column: 1; }
+  .book-journey .library-card h3 { font-size: 27px; margin: 18px 0; }
+  .book-journey .library-theme { font-size: 9px; }
+  .book-journey .library-description { font-size: 12px; margin: 20px 0; }
+  .motion-paused .book-journey .library-card { padding-top: 35px; }
+  .motion-paused .book-journey .library-card > .book-scene,
+  .motion-paused .book-journey .library-card:nth-of-type(even) > .book-scene {
+    grid-column: 1;
+    grid-row: 1;
+    height: 300px;
+  }
+  .motion-paused .book-journey .library-card .library-copy { grid-row: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .book-journey-stage { display: none; }
+  .book-journey .library-card { height: auto; min-height: 520px; }
+  .book-journey .library-card > .book-scene { display: flex; grid-column: 2; grid-row: 1; height: 430px; margin: 0; }
+  .book-journey .library-card:nth-of-type(even) > .book-scene { grid-column: 1; }
+}
+@media (prefers-reduced-motion: reduce) and (max-width: 700px) {
+  .book-journey .library-card { padding-top: 35px; }
+  .book-journey .library-card > .book-scene,
+  .book-journey .library-card:nth-of-type(even) > .book-scene { grid-column: 1; grid-row: 1; height: 300px; }
+  .book-journey .library-card .library-copy { grid-row: 2; }
+}

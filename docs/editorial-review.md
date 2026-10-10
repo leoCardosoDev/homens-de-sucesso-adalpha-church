@@ -1,4 +1,4 @@
-# Revisão editorial — 9 de outubro de 2026
+# Revisão editorial — 10 de outubro de 2026
 
 ## Abertura
 
@@ -6,7 +6,7 @@ Ministério de homens • Igreja ADAlpha.
 
 **Fé que forma, coragem que conquista.**
 
-Homens de Sucesso é o ministério de homens da Igreja ADAlpha. Um convite a cultivar intimidade com Deus, fortalecer o caráter e viver com coragem para assumir os compromissos de cada dia.
+Somos o ministério de homens da ADAlpha, comprometido em formar discípulos e líderes segundo o coração de Deus.
 
 “Conheça o ministério” leva ao propósito; “Assista à mensagem” leva à seção de Davi.
 
@@ -14,9 +14,11 @@ Homens de Sucesso é o ministério de homens da Igreja ADAlpha. Um convite a cul
 
 **Uma vida de fé, caráter e propósito.**
 
-O verdadeiro sucesso começa na intimidade com Deus. Ele amadurece nas escolhas que fazemos, na fidelidade aos compromissos e na disposição para servir.
+A missão, as atividades e o compromisso do ministério foram incorporados conforme o texto institucional fornecido em 10 de outubro de 2026. A seção “Nossa caminhada” apresenta os 12 princípios do discipulado.
 
-Homens de Sucesso comunica essa direção: homens que crescem na fé, assumem responsabilidades e vivem com coragem para cuidar, servir e construir um legado.
+O organograma identifica Jairo Manhães como pastor principal, Marcelo Oide como líder principal e os gestores e líderes das 11 bases informadas. Propósito completa a relação de 12 princípios, com responsáveis a informar. A lista recebida não distingue líder e co-líder entre cada par de nomes; ambos aparecem como “Liderança da base”. Cada base cuida de até 12 homens. Nomes repetidos representam funções exercidas em bases diferentes, não pessoas adicionais.
+
+O convite final e o rodapé apontam para o [Instagram oficial informado pelo ministério](https://www.instagram.com/_homensdesucesso.oficial/).
 
 ## Contextualização da mensagem
 
@@ -27,9 +29,9 @@ A página identifica esse conteúdo como prévia visual. O clipe de transformaç
 ## Pendências para a versão pública
 
 - Filme devocional completo aprovado, com sua locução e CTA original: não localizado nos arquivos fornecidos.
-- Nomes e fotos reais do pastor principal, líder principal, 12 gestores e 24 líderes; nomes oficiais das 12 bases. A prévia mostra posições e estados neutros, sem pessoas inventadas.
+- Gestor e liderança da Base Propósito; distinção entre líder e co-líder nos pares fornecidos; fotos reais, se desejadas. Os nomes das outras 11 bases e seus responsáveis já foram cadastrados.
 - Endereços oficiais ativos de cada livro. A loja indicada retornou HTTP 410; os botões abrem informações sobre a obra e indicam a atualização pendente.
-- Aprovação dos textos institucionais propostos e da contextualização audiovisual.
+- Revisão da contextualização audiovisual, caso seja fornecida uma mensagem devocional final.
 
 As quatro capas foram recebidas e incorporadas. Ordem: Transição, A Recompensa da Sabedoria, Vontade de Deus ou Meus Planos?, (CEO) do Universo. Prefácio do último: cantora Cassiane, confirmado pelo responsável.
 
@@ -39,6 +41,7 @@ Não foram adicionados agenda, participação, contato, depoimentos, rostos fict
 
 ## Fontes editoriais
 
+- Texto institucional, relação de bases e responsáveis e Instagram oficial fornecidos pelo responsável em 10 de outubro de 2026.
 - Briefing de conteúdo e propósito — Homens de Sucesso, versão 3, fornecido pelo responsável.
 - Design System local e seus componentes de identidade, navegação e organograma.
 - Capas e ordem de lançamento fornecidas pelo responsável, nesta conversa.

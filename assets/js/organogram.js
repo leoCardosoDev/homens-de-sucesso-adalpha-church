@@ -2,7 +2,7 @@
   const NS = 'http://www.w3.org/2000/svg';
   const rows = [
     ['Pastor', 'Principal'], ['Líder', 'Principal'], ['Gestores', '12 gestores'],
-    ['Bases', 'Uma por gestor'], ['Líderes de Base', '2 por Base · 24 líderes']
+    ['Bases', 'Até 12 homens'], ['Liderança de Base', 'Líder e co-líder']
   ];
   let instance = 0;
   document.querySelectorAll('[data-organogram]').forEach(app => {
@@ -39,7 +39,7 @@
       const y = 24 + row * 210;
       const nodeHeight = role === 'member' ? 180 : role === 'base' ? 126 : 150;
       const title = person.name || fallback;
-      const subtitle = role === 'base' ? '2 líderes de Base' : person.role;
+      const subtitle = role === 'base' ? 'Discipulado · até 12 homens' : person.role;
       const baseData = data.bases.find(item => item.id === base);
       const node = element('button', {
         type:'button', class:`org-node is-${role}`, 'data-org-node':id,
@@ -59,7 +59,7 @@
           const photo = element('img', {src:person.photo, alt:'', loading:'lazy'});
           photo.addEventListener('error', () => photo.remove(), {once:true});
           portrait.append(photo);
-        } else portrait.append(element('small', {}, 'Foto pendente'));
+        }
         node.append(portrait);
       }
       const content = element('span', {class:'org-node-content'});
@@ -124,11 +124,11 @@
         const baseData = data.bases.find(item => item.id === base);
         const left = mode === 'matrix' ? 140 + index*356 : 132;
         const nodeWidth = mode === 'matrix' ? 332 : 300;
-        const manager = addNode(`gestor-${base}`, 'manager', 2, base, left, nodeWidth, baseData.manager, 'Nome a cadastrar', `G${code}`);
+        const manager = addNode(`gestor-${base}`, 'manager', 2, base, left, nodeWidth, baseData.manager, 'A informar', `G${code}`);
         const baseNode = addNode(`base-${base}`, 'base', 3, base, left, nodeWidth, baseData, `Base ${code}`, `B${code}`);
         const memberWidth = (nodeWidth-16)/2;
-        const a = addNode(`lider-${base}-a`, 'member', 4, base, left, memberWidth, baseData.leaders[0], 'Nome a cadastrar', `L${code}A`);
-        const b = addNode(`lider-${base}-b`, 'member', 4, base, left+memberWidth+16, memberWidth, baseData.leaders[1], 'Nome a cadastrar', `L${code}B`);
+        const a = addNode(`lider-${base}-a`, 'member', 4, base, left, memberWidth, baseData.leaders[0], 'A informar', `L${code}A`);
+        const b = addNode(`lider-${base}-b`, 'member', 4, base, left+memberWidth+16, memberWidth, baseData.leaders[1], 'A informar', `L${code}B`);
         addEdge(svg, leader, manager, base);
         addEdge(svg, manager, baseNode, base);
         addEdge(svg, baseNode, a, base); addEdge(svg, baseNode, b, base);
@@ -161,12 +161,15 @@
       baseSelect.value = String(selected);
       detailPath.replaceChildren();
       const baseData = data.bases.find(item => item.id === selected);
-      const chain = selected ? ['Pastor', 'Líder principal', `Gestor ${pad(selected)}`, baseData.name, '2 líderes de Base'] : ['Pastor', 'Líder principal', '12 Gestores', '12 Bases', '24 líderes de Base'];
+      const chain = selected ? [data.pastor.name, data.principal.name, baseData.manager.name || 'Gestor a informar', baseData.name, 'Líder e co-líder'] : ['Pastor', 'Líder principal', '12 gestores', '12 bases', 'Líder e co-líder por base'];
       chain.forEach((label,index) => {
         if (index) detailPath.append(element('span', {class:'org-detail-arrow', 'aria-hidden':'true'}, '→'));
         detailPath.append(element('b', {}, label));
       });
-      detailText.textContent = selected ? `${baseData.name}: ${baseData.manager.name || 'nome do gestor a definir'} · 2 líderes ligados diretamente à Base.` : 'Clique e arraste para explorar as 12 Bases. Selecione uma Base ou use “Uma Base” para acompanhar sua liderança.';
+      detailText.textContent = selected ? (baseData.manager.name
+        ? `Gestor: ${baseData.manager.name}. Liderança: ${baseData.leaders.map(person => person.name).join(' e ')}. Cuidado e discipulado de até 12 homens.`
+        : `${baseData.name}: gestor e liderança a informar. Cuidado e discipulado de até 12 homens.`)
+        : 'Clique e arraste para explorar as 12 bases. Selecione uma base ou use “Uma base” para acompanhar sua liderança.';
       badge.replaceChildren(element('span', {class:'org-detail-dot', 'aria-hidden':'true'}), document.createTextNode(selected ? baseData.name : '12 Bases · 24 líderes'));
     }
 

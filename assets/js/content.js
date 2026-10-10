@@ -1,14 +1,28 @@
-/* Cadastro editorial. Preencher apenas com dados reais e imagens locais em WebP. */
+/* Dados institucionais fornecidos pelo ministério. Fotos locais em WebP. */
 window.HDS_ORGANOGRAM = {
-  pastor: { name: '', role: 'Pastor principal', photo: '' },
-  principal: { name: '', role: 'Líder principal do ministério', photo: '' },
-  bases: Array.from({ length: 12 }, (_, i) => ({
+  pastor: { name: 'Jairo Manhães', role: 'Pastor principal', photo: '' },
+  principal: { name: 'Marcelo Oide', role: 'Líder principal do ministério', photo: '' },
+  bases: [
+    ['Aliança', 'Pr. Allan', 'Reinaldo', 'Marcelo Oide'],
+    ['Disciplina', 'Marcelo Oide', 'Fernando Soeira', 'Agnaldo'],
+    ['Responsabilidade', 'Marcelo Andrade', 'Alessandro', 'Leo Senna'],
+    ['Visão', 'Maicon', 'Leo', 'Kleber'],
+    ['Governo Próprio', 'Leo Senna', 'Marcelo Andrade', 'Jailson'],
+    ['Legado', 'Henrique', 'Ewerthon', 'João Thiago'],
+    ['Produtividade', 'Pr. Marcelo Santos', 'Fábio', 'Ricardo'],
+    ['Sabedoria', 'Daniel Brunet', 'Gil Torres', 'Daniel'],
+    ['Excelência', 'Kleber', 'Zé Luís', 'Antonio Macedo'],
+    ['Fidelidade', 'Kaio Martins', 'Leandro', 'Dênis'],
+    ['Autoridade', 'Igor Mendes', 'Davi Silva', 'Sidnei'],
+    ['Propósito', '', '', '']
+  ].map(([name, manager, leader, coleader], i) => ({
     id: i + 1,
-    name: `Base ${String(i + 1).padStart(2, '0')} · nome a cadastrar`,
-    manager: { name: '', role: 'Gestor da base', photo: '' },
+    name: `Base ${name}`,
+    manager: { name: manager, role: 'Gestor da base', photo: '' },
+    // A relação recebida não distingue qual dos dois nomes é o co-líder.
     leaders: [
-      { name: '', role: 'Líder de base', photo: '' },
-      { name: '', role: 'Líder de base', photo: '' }
+      { name: leader, role: 'Liderança da base', photo: '' },
+      { name: coleader, role: 'Liderança da base', photo: '' }
     ]
   }))
 };

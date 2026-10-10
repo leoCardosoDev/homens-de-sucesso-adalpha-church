@@ -16,3 +16,17 @@ html{scroll-padding-top:110px}body{overflow-x:clip}p{line-height:1.9}button{colo
 .hero-photo{overflow:hidden}.hero-photo img{min-height:100%}
 .library-card{scroll-margin-top:130px}
 .library-preface{font-size:9px;color:var(--muted);display:block;margin-top:5px;line-height:1.7}
+
+/* Institutional content: principles and the ministry's shared leadership. */
+.discipleship-principles{margin-top:55px;padding-top:40px;border-top:1px solid var(--line)}
+.principles-intro{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:end;margin-bottom:28px}
+.principles-intro h3{font-size:clamp(20px,2.1vw,30px);font-weight:500;line-height:1.4;margin:14px 0 0}
+.principles-intro p{font-size:12px;color:var(--muted);margin:0;max-width:550px}
+.principles-grid{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0;margin:0;gap:0 30px}
+.principles-grid li{display:flex;align-items:center;gap:16px;padding:21px 0;border-bottom:1px solid var(--line);font-size:13px;min-width:0}
+.principles-grid .mono{color:var(--brand);font-size:9px;flex-shrink:0}
+.ministry-leadership{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin:0 0 35px;padding:25px 0;border-block:1px solid var(--line)}
+.ministry-leadership dt{font-size:10px;color:var(--muted);margin-bottom:10px}
+.ministry-leadership dd{font-size:20px;font-weight:500;margin:0;line-height:1.4}
+@media(max-width:850px){.principles-intro{grid-template-columns:1fr;gap:18px}.principles-grid{gap:0 20px}.ministry-leadership{gap:20px}.ministry-leadership dd{font-size:17px}}
+@media(max-width:600px){.discipleship-principles{margin-top:35px;padding-top:30px}.principles-intro p{font-size:11px}.principles-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.principles-grid li{font-size:11px;gap:10px;padding:18px 0}.ministry-leadership{grid-template-columns:1fr;gap:20px;padding:22px 0}.ministry-leadership dt{margin-bottom:5px}.ministry-leadership dd{font-size:18px}}

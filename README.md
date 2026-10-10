@@ -18,9 +18,10 @@ Abra http://127.0.0.1:4173. O `index.html` também funciona aberto diretamente e
 - Quatro livros na ordem de lançamento informada. As capas originais foram convertidas sem perdas e enquadradas na página sem reescrever as letras.
 - “10 / Livros e leituras” apresenta quatro linhas alternadas. Um único volume em CSS 3D gira, troca de lado e muda de capa com a rolagem, adaptando o Scroll e 3D do Design System. No celular, o livro fica acima do texto; com movimento pausado, cada linha mostra sua própria capa estática.
 - Três cenas de Davi em WebP e 239 frames a 24 fps do clipe fornecido, com reprodução e áudio opcional. Imagens e frames carregam conforme a necessidade; o cache de imagens decodificadas é limitado.
-- Organograma do Design System copiado e adaptado, com cinco níveis e 50 cards. Permite matriz completa, consulta por base, zoom e teclado; inicia por uma base no celular.
+- Organograma do Design System copiado e adaptado, com cinco níveis e 50 cards. Inclui Jairo Manhães, Marcelo Oide e os responsáveis de 11 bases; Propósito aguarda os nomes. Permite matriz completa, consulta por base, zoom e teclado; inicia por uma base no celular.
 - Navegação móvel, perguntas de reflexão expansíveis e controles de movimento. Respeita `prefers-reduced-motion`.
-- Os três valores de “Nossa caminhada” usam o coverflow do Design System, com seleção por clique, arraste, botões e teclado. As imagens de Davi e os textos originais permanecem.
+- Os três valores de “Nossa caminhada” usam o coverflow do Design System, com seleção por clique, arraste, botões e teclado. A seção também apresenta os 12 princípios das bases de discipulado.
+- Texto institucional, missão, atividades, cuidado de até 12 homens por base e Instagram oficial incorporados em 10 de outubro de 2026.
 - Todos os assets usados são locais. O Design System original permanece preservado.
 
 Editar `assets/js/content.js` para cadastrar dados reais da liderança ou atualizar os destinos oficiais dos livros. Fotos novas precisam ser WebP locais. Os valores `geometry.corners` enquadram cada imagem fornecida sem modificar a arte.
